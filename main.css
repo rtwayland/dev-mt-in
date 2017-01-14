@@ -26,7 +26,8 @@ header div {
   white-space: normal;
 }
 
-header .search-glass, header .menu {
+header .menu,
+header .search-glass {
   width: 15%;
 }
 
@@ -97,7 +98,32 @@ main .shapes-container {
 
 .shapes-container {
   width: 60%;
-  background-color: #74fdf2;
+  position: relative;
+}
+
+.shapes-container .triangles {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shapes-container .up-triangle {
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid grey;
+}
+
+.shapes-container .down-triangle {
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-top: 88px solid transparent;
+  border-right: 400px solid #74fdf2;
+  border-bottom: 270px solid transparent;
 }
 
 nav {

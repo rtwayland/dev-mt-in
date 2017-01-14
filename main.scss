@@ -7,7 +7,17 @@ $font-opensans: 'Open Sans';
 $color-triangle: #74fdf2;
 $color-button: #74fdf2;
 $color-form-borders: #eeeded;
-
+@mixin absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin absolute-center-horizontal {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
 
 * {
     box-sizing: border-box;
@@ -17,6 +27,7 @@ body {
     margin: 0;
     height: 100%;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -30,21 +41,23 @@ header {
     line-height: 70px;
 
     div {
-      display: inline-block;
-      white-space: normal;
+        display: inline-block;
+        white-space: normal;
     }
 
-    .search-glass, .menu {
-      width: 15%;
+    .menu,
+    .search-glass {
+        width: 15%;
     }
 
     .company-title {
-      width: 70%;
-      font-family: $font-lora;
-      font-size: 21px;
-      color: $color-company-text;
+        width: 70%;
+        font-family: $font-lora;
+        font-size: 21px;
+        color: $color-company-text;
     }
 }
+
 main {
     white-space: nowrap;
     margin-top: 70px;
@@ -106,7 +119,29 @@ main {
 
 .shapes-container {
     width: 60%;
-    background-color: $color-triangle;
+    position: relative;
+
+    .triangles {
+        @include absolute-center;
+    }
+
+    .up-triangle {
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid grey;
+    }
+
+    .down-triangle {
+        z-index: 5;
+        width: 0;
+        height: 0;
+        border-top: 88px solid transparent;
+        border-right: 400px solid $color-triangle;
+        border-bottom: 270px solid transparent;
+    }
 }
 
 nav {
