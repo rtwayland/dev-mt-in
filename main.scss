@@ -11,6 +11,7 @@ $color-form-borders: #eeeded;
     position: absolute;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 @mixin absolute-center-horizontal {
@@ -55,24 +56,33 @@ header {
         font-family: $font-lora;
         font-size: 21px;
         color: $color-company-text;
+        cursor: pointer;
     }
 }
 
 main {
     white-space: nowrap;
     margin-top: 70px;
-    margin-bottom: 100px;
+    @media screen and (min-width: 750px) {
+        margin-bottom: 100px;
 
-    .form-container,
-    .shapes-container {
-        display: inline-block;
-        white-space: normal;
-        // height: 100vh;
+        .left-container,
+        .shapes-container {
+            display: inline-block;
+            white-space: normal;
+            vertical-align: top;
+        }
+
+        .left-container {
+          width: 40%;
+        }
+        .shapes-container {
+          width: 60%;
+        }
     }
 }
 
-.form-container {
-    width: 40%;
+.left-container {
     padding-top: 50px;
 
     p.intro-text {
@@ -114,12 +124,18 @@ main {
             text-align: center;
             color: $color-save-text;
             line-height: 35px;
+            cursor: pointer;
         }
+    }
+
+    .text-container {
+        width: 80%;
+        text-align: justify;
+        margin: auto;
     }
 }
 
 .shapes-container {
-    width: 60%;
     position: relative;
 
     .triangles {
@@ -127,23 +143,25 @@ main {
     }
 
     .triangle-up {
+        position: absolute;
         z-index: 0;
         width: 0;
         height: 0;
-        top: -125px;
+        top: -200px;
         border-left: 200px solid transparent;
         border-right: 200px solid transparent;
-        border-bottom: 250px solid grey;
+        border-bottom: 320px solid grey;
         transform: rotate(7deg);
     }
 
     .triangle-down {
+        position: absolute;
         z-index: 5;
         width: 0;
         height: 0;
         border-left: 200px solid transparent;
         border-right: 200px solid transparent;
-        border-top: 250px solid $color-triangle;
+        border-top: 320px solid $color-triangle;
         transform: rotate(-7deg);
     }
 }
@@ -169,6 +187,7 @@ nav {
             font-size: 18px;
             display: inline-block;
             width: calc(100%/3);
+            cursor: pointer;
         }
         // @media screen and (max-width:690px) {
         //     display: none;

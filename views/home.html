@@ -1,0 +1,30 @@
+<header>
+    <div class="search-glass">Search</div>
+    <div class="company-title">DevMountain</div>
+    <div class="menu">Menu</div>
+</header>
+<main>
+    <div class="left-container">
+        <p class="intro-text">Welcome to DevMountain Social<br>Add Some Info So Friends Can Find You</p>
+        <form class="">
+            <input type="text" name="name" id="name" ng-model="user.name" placeholder="Full Name">
+            <input type="text" name="tagline" id="tagline" ng-model="user.tagline" placeholder="Tagline">
+            <input type="text" name="img-url" id="img-url" ng-model="user.imgUrl" placeholder="Profile Image Url">
+            <textarea name="bio" id="bio" ng-model="user.bio" placeholder="Bio"></textarea>
+            <div class="save-button" ng-click="saveUser(user)" ui-sref="my-profile">Save Changes</div>
+        </form>
+    </div>
+    <div class="shapes-container">
+        <div class="triangles">
+            <div class="triangle-up"></div>
+            <div class="triangle-down"></div>
+        </div>
+    </div>
+</main>
+<nav>
+    <ul>
+        <li ui-sref="view-friends">View Friends</li>
+        <li>Find Friends</li>
+        <li>Update Profile</li>
+    </ul>
+</nav>

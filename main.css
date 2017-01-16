@@ -36,58 +36,69 @@ header .company-title {
   font-family: "Lora";
   font-size: 21px;
   color: #272727;
+  cursor: pointer;
 }
 
 main {
   white-space: nowrap;
   margin-top: 70px;
-  margin-bottom: 100px;
 }
 
-main .form-container,
-main .shapes-container {
-  display: inline-block;
-  white-space: normal;
+@media screen and (min-width: 750px) {
+  main {
+    margin-bottom: 100px;
+  }
+  main .left-container,
+  main .shapes-container {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+  }
+  main .left-container {
+    width: 40%;
+  }
+  main .shapes-container {
+    width: 60%;
+  }
 }
 
-.form-container {
-  width: 40%;
+.left-container {
   padding-top: 50px;
 }
 
-.form-container p.intro-text {
+.left-container p.intro-text {
   width: 80%;
   margin: auto;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.form-container form {
+.left-container form {
   font-family: "Lora";
   width: 80%;
   margin: auto;
 }
 
-.form-container form input,
-.form-container form textarea {
+.left-container form input,
+.left-container form textarea {
   font-size: 19px;
   font-family: "Lora";
   width: 100%;
   border: 1px solid #eeeded;
 }
 
-.form-container form input {
+.left-container form input {
   display: block;
   height: 35px;
   margin-bottom: 5px;
 }
 
-.form-container form textarea {
+.left-container form textarea {
   resize: none;
   height: 10em;
 }
 
-.form-container form .save-button {
+.left-container form .save-button {
   font-size: 17px;
   background-color: #74fdf2;
   width: 100%;
@@ -95,10 +106,16 @@ main .shapes-container {
   text-align: center;
   color: #9a9a9a;
   line-height: 35px;
+  cursor: pointer;
+}
+
+.left-container .text-container {
+  width: 80%;
+  text-align: justify;
+  margin: auto;
 }
 
 .shapes-container {
-  width: 60%;
   position: relative;
 }
 
@@ -106,27 +123,30 @@ main .shapes-container {
   position: absolute;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .shapes-container .triangle-up {
+  position: absolute;
   z-index: 0;
   width: 0;
   height: 0;
-  top: -125px;
+  top: -200px;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-bottom: 250px solid grey;
+  border-bottom: 320px solid grey;
   transform: rotate(7deg);
 }
 
 .shapes-container .triangle-down {
+  position: absolute;
   z-index: 5;
   width: 0;
   height: 0;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-top: 250px solid #74fdf2;
+  border-top: 320px solid #74fdf2;
   transform: rotate(-7deg);
 }
 
@@ -153,4 +173,5 @@ nav ul li {
   font-size: 18px;
   display: inline-block;
   width: calc(100%/3);
+  cursor: pointer;
 }

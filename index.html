@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="socialApp">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,35 +8,14 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-	<header>
-		<div class="search-glass">Search</div>
-		<div class="company-title">DevMountain</div>
-		<div class="menu">Menu</div>
-	</header>
-	<main>
-		<div class="form-container">
-			<p class="intro-text">Welcome to DevMountain Social<br>Add Some Info So Friends Can Find You</p>
-			<form class="">
-				<input type="text" name="name" id="name" placeholder="Full Name">
-				<input type="text" name="tagline" id="tagline" placeholder="Tagline">
-				<input type="text" name="img-url" id="img-url" placeholder="Profile Image Url">
-				<textarea name="bio" id="bio" placeholder="Bio"></textarea>
-				<div class="save-button">Save Changes</div>
-			</form>
-		</div>
-		<div class="shapes-container">
-			<div class="triangle-up triangles"></div>
-			<div class="triangle-down triangles"></div>
-		</div>
-	</main>
-	<nav>
-		<ul>
-			<li>View Friends</li>
-			<li>Find Friends</li>
-			<li>Update Profile</li>
-		</ul>
-	</nav>
+<body ng-controller="profileController">
+
+	<ui-view></ui-view>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers/profileController.js"></script>
 </body>
 
 </html>
