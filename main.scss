@@ -61,6 +61,7 @@ header {
 main {
     white-space: nowrap;
     margin-top: 70px;
+    margin-bottom: 100px;
 
     .form-container,
     .shapes-container {
@@ -125,22 +126,22 @@ main {
         @include absolute-center;
     }
 
-    .up-triangle {
+    .triangle-up {
         z-index: 0;
         width: 0;
         height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
         border-bottom: 100px solid grey;
     }
 
-    .down-triangle {
+    .triangle-down {
         z-index: 5;
         width: 0;
         height: 0;
-        border-top: 88px solid transparent;
-        border-right: 400px solid $color-triangle;
-        border-bottom: 270px solid transparent;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 100px solid $color-triangle;
     }
 }
 

@@ -41,6 +41,7 @@ header .company-title {
 main {
   white-space: nowrap;
   margin-top: 70px;
+  margin-bottom: 100px;
 }
 
 main .form-container,
@@ -108,22 +109,22 @@ main .shapes-container {
   transform: translate(-50%, -50%);
 }
 
-.shapes-container .up-triangle {
+.shapes-container .triangle-up {
   z-index: 0;
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
   border-bottom: 100px solid grey;
 }
 
-.shapes-container .down-triangle {
+.shapes-container .triangle-down {
   z-index: 5;
   width: 0;
   height: 0;
-  border-top: 88px solid transparent;
-  border-right: 400px solid #74fdf2;
-  border-bottom: 270px solid transparent;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid #74fdf2;
 }
 
 nav {
