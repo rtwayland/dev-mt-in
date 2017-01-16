@@ -113,18 +113,21 @@ main .shapes-container {
   z-index: 0;
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid grey;
+  top: -125px;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 250px solid grey;
+  transform: rotate(7deg);
 }
 
 .shapes-container .triangle-down {
   z-index: 5;
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 100px solid #74fdf2;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 250px solid #74fdf2;
+  transform: rotate(-7deg);
 }
 
 nav {

@@ -130,18 +130,21 @@ main {
         z-index: 0;
         width: 0;
         height: 0;
-        border-left: 100px solid transparent;
-        border-right: 100px solid transparent;
-        border-bottom: 100px solid grey;
+        top: -125px;
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-bottom: 250px solid grey;
+        transform: rotate(7deg);
     }
 
     .triangle-down {
         z-index: 5;
         width: 0;
         height: 0;
-        border-left: 100px solid transparent;
-        border-right: 100px solid transparent;
-        border-top: 100px solid $color-triangle;
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-top: 250px solid $color-triangle;
+        transform: rotate(-7deg);
     }
 }
 
