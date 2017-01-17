@@ -1,7 +1,7 @@
 @import url( 'https://fonts.googleapis.com/css?family=Lora|Open+Sans');
 $color-nav-text: #a9a9a9;
 $color-save-text: #9a9a9a;
-$color-company-text: #272727;
+$color-dark-text: #272727;
 $font-lora: 'Lora';
 $font-opensans: 'Open Sans';
 $color-triangle: #74fdf2;
@@ -55,7 +55,7 @@ header {
         width: 70%;
         font-family: $font-lora;
         font-size: 21px;
-        color: $color-company-text;
+        color: $color-dark-text;
         cursor: pointer;
     }
 }
@@ -74,10 +74,11 @@ main {
         }
 
         .left-container {
-          width: 40%;
+            width: 40%;
         }
+
         .shapes-container {
-          width: 60%;
+            width: 60%;
         }
     }
 }
@@ -129,9 +130,30 @@ main {
     }
 
     .text-container {
-        width: 80%;
+        width: 60%;
         text-align: justify;
         margin: auto;
+
+        .user-name {
+            width: 70%;
+            font-family: $font-lora;
+            font-size: 46px;
+            color: $color-dark-text;
+            text-indent: -30px;
+            padding-left: 28px;
+        }
+
+        .user-bio,
+        .user-tagline {
+            font-size: 14px;
+            font-family: $font-opensans;
+            color: black;
+        }
+
+        .user-tagline {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -163,6 +185,10 @@ main {
         border-right: 200px solid transparent;
         border-top: 320px solid $color-triangle;
         transform: rotate(-7deg);
+
+        // background: url('https://www.phactual.com/wp-content/uploads/2015/06/14344.jpeg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
     }
 }
 

@@ -110,9 +110,30 @@ main {
 }
 
 .left-container .text-container {
-  width: 80%;
+  width: 60%;
   text-align: justify;
   margin: auto;
+}
+
+.left-container .text-container .user-name {
+  width: 70%;
+  font-family: "Lora";
+  font-size: 46px;
+  color: #272727;
+  text-indent: -30px;
+  padding-left: 28px;
+}
+
+.left-container .text-container .user-bio,
+.left-container .text-container .user-tagline {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: black;
+}
+
+.left-container .text-container .user-tagline {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .shapes-container {
